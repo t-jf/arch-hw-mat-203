@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage[utf8]{enumerate}
 
 \title{Calculus III Midterm 2 - Solutions}
 \date{November 2019}
@@ -9,51 +10,79 @@
 \maketitle
 
 \section{Surface Area of a Sphere}
-\begin{enumerate}
+\begin{enumerate}[a.]
 	\item Cylindrically -- cylindrical bands on the surface
 	    \newline \newline
         Use the gradient form
-        \newline
-            $\int\int
-                \sqrt{
-                    (\frac{\partial z}{\partial x})^2 +
-                    (\frac{\partial z}{\partial y}^2) + 1
-                } dA$$
 
-        \newline
+            $\int\int
+                \sqrt{ (\frac{\partial z}{\partial x})^2 + (\frac{\partial z}{\partial y}^2) + 1 } dA$
+
+
             $z = +-\sqrt{1-x^{2}-y^{2}}$
-        \newline
+
             $\frac{\partial z}{\partial x} = \frac{-x}{\sqrt{1-x^2+y^2}}$
-        \newline
+
             $\frac{\partial z}{\partial y} = \frac{-y}{\sqrt{1-x^2+y^2}}$
-        \newline
+
             $0 <= \theta <= 2\pi $
-        \newline
+
             $0 <= \phi <= \pi $
-        \newline
+
             $x = \rho\sin(\phi)\cos(\theta) $
-        \newline
+
             $y = \rho\sin(\phi)\sin(\theta) $
-        \newline
+
             $z = \rho\cos(\phi) $
-        \newline
+
             Jacobian$ = \rho^2\sin(\phi) $
-        \newline
-            $2\int_{0}^{2\pi}\int_{0}^{1} \frac{1}{\sqrt{1-r^2}}\cdot r dr d\theta$
-        \newline
+
+            $2\int_{0}^{2\pi}\int_{\theta=0}^{\pi} \frac{1}{\sqrt{1-r^2}}\cdot r dr d\theta$
+
 	\item Spherically -- rectangles on surface
-        \newline \newline
-            $2\int_{\theta=0}^{\theta=\pi}\int_{\phi=0}^{\phi=2\pi} (r sin \theta) d\phi d\theta$
-        \newline \newline
+
+            $\int_{\theta=0}^{\theta=\pi}r\cdot\int_{\phi=0}^{\phi=2\pi} (r sin \theta) d\phi d\theta $
+
+            $= \int_{\theta=0}^{\theta=\pi}r^2 2\pi \sin(\theta)d\theta $
+
+            $=  2\pi r^2 (-\cos(\pi)+\cos(0)) $
+
+            $= 4\pi r^2$
+
 	\item Stereographically -- vector intersections with the surface
 \end{enumerate}
 
 \section{Volume of a Sphere}
-\begin{enumerate}
-	\item Cylindrically -- discs stacking to form sphere
+\begin{enumerate}[a.]
+	\item Cylindrically -- cylindrical "shells" to form sphere
+
+        $2\int_{r = 0}^{r = 1} \int_{\theta = 0}^{\theta = 2\pi} \int_{z = 0}^{z = \sqrt{1-r^2}} dz d\theta dr$
+
+        $2\int_{r = 0}^{r = 1} \int_{\theta = 0}^{\theta = 2\pi} \sqrt{1-r^2} d\theta dr$
+
+        $2\int_{r = 0}^{r = 1} \sqrt{1-r^2} d\theta dr$
+
 	\item Spherically -- convert from Cartesian and calculate
+
+        $\int_{r=0}^{r=R}\int_{\theta=0}^{\theta=2\pi}\int_{\phi=0}^{\phi=2\pi} dV $
+
+        $ = \int_{r=0}^{r=R}\int_{\theta=0}^{\theta=2\pi} 2\pi (r^2\sin(\theta))  d\theta dr $
+
+        $ = \int_{r=0}^{r=R}4\pi r^2 dr $
+
+        $ = \frac{4}{3}\pi R^3 $
+
 	\item Cylindrically -- convert from Cartesian and calculate
-	\item Spherically -- order integral to form "shells" emanating from origin
+	\item Spherically -- order integral to form spherical "shells" emanating from origin
+
+        $\int_{r=0}^{r=R}\int_{\theta=0}^{\theta=2\pi}\int_{\phi=0}^{\phi=2\pi} dV $
+
+        $ = \int_{r=0}^{r=R}\int_{\theta=0}^{\theta=2\pi} 2\pi (r^2\sin(\theta))  d\theta dr $
+
+        $ = \int_{r=0}^{r=R}4\pi r^2 dr $
+
+        $ = \frac{4}{3}\pi R^3 $
+
 	\item Stereographically -- vector intersections with the surface
 \end{enumerate}
 
