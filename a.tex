@@ -11,14 +11,49 @@
 \section{Surface Area of a Sphere}
 \begin{enumerate}
 	\item Cylindrically -- cylindrical bands on the surface
+	    \newline \newline
+        Use the gradient form
+        \newline
+            $\int\int
+                \sqrt{
+                    (\frac{\partial z}{\partial x})^2 +
+                    (\frac{\partial z}{\partial y}^2) + 1
+                } dA$$
+
+        \newline
+            $z = +-\sqrt{1-x^{2}-y^{2}}$
+        \newline
+            $\frac{\partial z}{\partial x} = \frac{-x}{\sqrt{1-x^2+y^2}}$
+        \newline
+            $\frac{\partial z}{\partial y} = \frac{-y}{\sqrt{1-x^2+y^2}}$
+        \newline
+            $0 <= \theta <= 2\pi $
+        \newline
+            $0 <= \phi <= \pi $
+        \newline
+            $x = \rho\sin(\phi)\cos(\theta) $
+        \newline
+            $y = \rho\sin(\phi)\sin(\theta) $
+        \newline
+            $z = \rho\cos(\phi) $
+        \newline
+            Jacobian$ = \rho^2\sin(\phi) $
+        \newline
+            $2\int_{0}^{2\pi}\int_{0}^{1} \frac{1}{\sqrt{1-r^2}}\cdot r dr d\theta$
+        \newline
 	\item Spherically -- rectangles on surface
+        \newline \newline
+            $2\int_{\theta=0}^{\theta=\pi}\int_{\phi=0}^{\phi=2\pi} (r sin \theta) d\phi d\theta$
+        \newline \newline
 	\item Stereographically -- vector intersections with the surface
 \end{enumerate}
 
 \section{Volume of a Sphere}
 \begin{enumerate}
-	\item Cylindrically -- discs stacking to form
-	\item Spherically -- rectangles on surface
+	\item Cylindrically -- discs stacking to form sphere
+	\item Spherically -- convert from Cartesian and calculate
+	\item Cylindrically -- convert from Cartesian and calculate
+	\item Spherically -- order integral to form "shells" emanating from origin
 	\item Stereographically -- vector intersections with the surface
 \end{enumerate}
 
@@ -28,8 +63,10 @@
 
 \section{Using series to calculate a pesky integral}
 
-\section{Using series to calculate \pi}
+\section{Using series to calculate $\pi$}
 
 \section{Using series to calculate}
+
+$\iint_{a}^{b} x^2 dx$
 
 \end{document}
