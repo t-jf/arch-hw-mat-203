@@ -16,8 +16,7 @@
         Use the gradient form
 
             $\int\int
-                \sqrt{ (\frac{\partial z}{\partial x})^2 + (\frac{\partial z}{\partial y}^2) + 1 } dA$
-
+                \sqrt{ (\frac{\partial z}{\partial x})^2 + (\frac{\partial z}{\partial y}^2) + 1 } \cdot dA$
 
             $z = +-\sqrt{1-x^{2}-y^{2}}$
 
@@ -101,9 +100,22 @@
 	\item Stereographically -- vector intersections with the surface
 \end{enumerate}
 
-\section{Gaussian Normal Curve as a Probability Density Function}
+\section{Gaussian Normal Curve as a Probability Density Function: Prove the volume is 2$\pi$ using polar}
+
+    $\int_{-\infty}^{\infty} e^-\frac{x^2}{2} dx = \int_{-\infty}^{\infty} e^-\frac{y^2}{2} dy $
+
+    $\int_{-\infty}^{\infty} e^-\frac{x^2}{2} dx \cdot \int_{-\infty}^{\infty} e^-\frac{y^2}{2} dy = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^-\frac{-(x^2+y^2)}{2} dx dy $
+
+    $\int_{0}^{\infty} \int_{0}^{2\pi} e^{-\frac{r^2}{2}} r \cdot d\theta d\dr $
+
+    $\int_{0}^{\infty} e^{-\frac{r^2}{2}} 2\pi r \cdot d\theta d\dr $
 
 \section{Sequences and Series}
+
+\begin{enumerate}[a.]
+	\item What does it mean for a sequence to converge?
+
+\end{enumerate}
 
 \section{Using series to calculate a pesky integral}
 
