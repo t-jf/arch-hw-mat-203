@@ -1,6 +1,11 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-\usepackage[utf8]{enumerate}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{amsthm}
 
 \title{Calculus III Midterm 2 - Solutions}
 \date{November 2019}
@@ -120,10 +125,29 @@
 
 \begin{enumerate}[a.]
 	\item What does it mean for a sequence to converge?
+
+	When a sequence converges, that means that as you get further and further along the sequence, the terms get closer and closer to a specific limit (usually a real number). For example, to see if the sequence
+
 	\item What does it mean for a series to converge?
+
+    A series is the sum of a sequence. When a series converges, the sums get closer and closer to a specific limit as we add more and more terms up to infinity. For example, to see if the infinite series
+
 	\item What does it mean for a series to converge absolutely?
+
+    A series $\sum a_n$ is called absolutely convergent if $\sum |a_n|$ is convergent. If $\sum a_n$ is convergent and $\sum |a_n|$ is divergent we call the series conditionally convergent.
+
 	\item If a series converges absolutely, does it converge? Prove it.
+
+    First notice that $|a_n|$ is either $a_n$ or it is $-a_n$ depending on its sign. This means that we can then say, $0 <= a_n + |a_n| <= 2|a_n|$
+
+    Now, since we are assuming that $\sum |a_n| $ is convergent then $\sum |a_n| $ is also convergent since we can just factor the 2 out of the series and 2 times a finite value will still be finite. This however allows us to use the Comparison Test to say that $\sum(a_n + |a_n|)$ is also a convergent series.
+
+    Finally, we can write, $\sum a_n = \sum(a_n + |a_n|) - \sum |a_n|$ and so $\sum a_n$ is the difference of two convergent series and so is also convergent.
+
 	\item If a series converges, does it converge absolutely? Provide counterexample.
+
+
+
 	\item What is a geometric sequence?
 	\item What is a geometric series?
 	\item What criteria guarantee convergence of either a geometric sequence or geometric series?
@@ -152,9 +176,33 @@
 
 \end{enumerate}
 
-\section{Using series to calculate a pesky integral}
+\section{Using series to calculate a pesky integral: $\int _{-\infty }^{\infty \:}e^{-\frac{x^2}{2}}dx$}
 
-    $$
+    $= \int _{-\infty \:}^{\infty \:\:}\sum _{n=0}^N\:\frac{1}{n!}\left(\left(-\frac{x^2}{2}\right)-0\right)^n dx$
+
+    $\Rightarrow s(n) = \frac{1}{n!}\left(\left(-\frac{x^2}{2}\right)-0\right)^n = \frac{\left(-\frac{x^2}{2}\right)^n}{n!}$
+
+    Remember: a sequence s(n) converges to a limit
+    $L \in\mathbb{R}\iff\forall $
+    $\epsilon > 0$
+    $ \exists $
+    $ N \in \mathbb{N} $
+    such that
+    $ |s(n) - L| < \epsilon $
+    $\forall$
+    $ n \in \mathbb{N} > N$
+
+    $\Rightarrow |(\frac{\left(-\frac{x^2}{2}\right)^n}{n!}) - L| < \epsilon$
+
+    We know/assume that: $L = \lim _{n\to \infty }\left(\frac{\left(-\frac{x^2}{2}\right)^n}{n!}\right) = 0$
+
+    $\Rightarrow |\frac{\left(-\frac{x^2}{2}\right)^n}{n!} - (0)| < \epsilon$
+
+    $ = |\frac{\left(-\frac{x^2}{2}\right)^n}{n!}| < \epsilon$
+
+    $ = \ln|\frac{\left(-\frac{x^2}{2}\right)^n}{n!}| < \ln(\epsilon)$
+
+    $ = \ln|\frac{\left(-\frac{x^2}{2}\right)^n}{n!}| < \ln(\epsilon)$
 
 \section{Using series to calculate $\pi$}
 
