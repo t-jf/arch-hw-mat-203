@@ -16,34 +16,33 @@
 
 \section{Surface Area of a Sphere}
 \begin{enumerate}[a.]
-	\item Cylindrically -- cylindrical bands on the surface
-	    \newline \newline
-        Use the gradient form
+	\item \textbf{Cylindrically -- cylindrical bands on the surface }
 
-            $\int\int
-                \sqrt{ (\frac{\partial z}{\partial x})^2 + (\frac{\partial z}{\partial y}^2) + 1 } \cdot dA$
+            Jacobian determinant: $ r $
 
-            $z = +-\sqrt{1-x^{2}-y^{2}}$
+            $ A(s) = \iint_{D}\sqrt{ (\frac{\partial z}{\partial x})^2 + (\frac{\partial z}{\partial y})^2 + 1 } \cdot dA $
 
-            $\frac{\partial z}{\partial x} = \frac{-x}{\sqrt{1-x^2+y^2}}$
+            $ z = \pm\sqrt{1-x^{2}-y^{2}} $
 
-            $\frac{\partial z}{\partial y} = \frac{-y}{\sqrt{1-x^2+y^2}}$
+            $ \frac{\partial z}{\partial x} = \frac{\partial \:}{\partial \:u}\left(\sqrt{u}\right)\frac{\partial \:}{\partial \:x}\left(1-x^2-y^2\right) = \frac{1}{2\sqrt{u}}\left(-2x\right) = -\frac{x}{\sqrt{1-x^2-y^2}} $
 
-            $0 <= \theta <= 2\pi $
+            $ \frac{\partial z}{\partial y} = \frac{\partial \:}{\partial \:u}\left(\sqrt{u}\right)\frac{\partial \:}{\partial \:y}\left(1-x^2-y^2\right) = \frac{1}{2\sqrt{u}}\left(-2y\right) = -\frac{y}{\sqrt{1-x^2-y^2}} $
 
-            $0 <= \phi <= \pi $
+            $ 2\int_{0}^{2\pi}\int_{\theta=0}^{\pi} \frac{1}{\sqrt{1-r^2}}\cdot r dr d\theta  $
 
-            $x = \rho\sin(\phi)\cos(\theta) $
+	\item \textbf{Spherically -- rectangles on surface}
 
-            $y = \rho\sin(\phi)\sin(\theta) $
+            Jacobian determinant: $ \rho^2\sin(\phi) $
 
-            $z = \rho\cos(\phi) $
+            $ 0 \leq \theta \leq 2\pi  $
 
-            Jacobian$ = \rho^2\sin(\phi) $
+            $ 0 \leq \phi \leq \pi  $
 
-            $2\int_{0}^{2\pi}\int_{\theta=0}^{\pi} \frac{1}{\sqrt{1-r^2}}\cdot r dr d\theta$
+            $ x = \rho\sin(\phi)\cos(\theta)  $
 
-	\item Spherically -- rectangles on surface
+            $ y = \rho\sin(\phi)\sin(\theta)  $
+
+            $ z = \rho\cos(\phi)  $
 
             $\int_{\theta=0}^{\theta=\pi}r\cdot\int_{\phi=0}^{\phi=2\pi} (r sin \theta) d\phi d\theta $
 
@@ -53,12 +52,12 @@
 
             $= 4\pi r^2$
 
-	\item Stereographically -- vector intersections with the surface
+	\item \textbf{Stereographically -- vector intersections with the surface}
 \end{enumerate}
 
 \section{Volume of a Sphere}
 \begin{enumerate}[a.]
-	\item Cylindrically -- cylindrical "shells" to form sphere
+	\item \textbf{Cylindrically -- cylindrical "shells" to form sphere}
 
         $ 2\int_{r = 0}^{r = R} \int_{\theta = 0}^{\theta = 2\pi} \int_{z = 0}^{z = \sqrt{1-r^2}} r \cdot dz d\theta dr$
 
@@ -70,7 +69,7 @@
 
         $ = \frac{4}{3}\pi R^3 $
 
-	\item Spherically -- convert from Cartesian and calculate
+	\item \textbf{Spherically -- convert from Cartesian and calculate}
 
         $\int_{r=0}^{r=R}\int_{\theta=0}^{\theta=2\pi}\int_{\phi=0}^{\phi=2\pi} dV $
 
@@ -80,7 +79,7 @@
 
         $ = \frac{4}{3}\pi R^3 $
 
-	\item Cylindrically -- convert from Cartesian and calculate
+	\item \textbf{Cylindrically -- convert from Cartesian and calculate}
 
         $8\int_{x = 0}^{x = 1} \int_{y = 0}^{y = \sqrt{1-x^2}} \int_{z = 0}^{z = \sqrt{1-(x^2+y^2)}} dz dy dx$
 
@@ -92,7 +91,7 @@
 
         $ = \frac{4}{3}\pi R^3 $
 
-	\item Spherically -- order integral to form spherical "shells" emanating from origin
+	\item \textbf{Spherically -- order integral to form spherical "shells" emanating from origin}
 
         $\int_{r=0}^{r=R}\int_{\theta=0}^{\theta=2\pi}\int_{\phi=0}^{\phi=2\pi} dV $
 
@@ -102,7 +101,7 @@
 
         $ = \frac{4}{3}\pi R^3 $
 
-	\item Stereographically -- vector intersections with the surface
+	\item \textbf{Stereographically -- vector intersections with the surface}
 \end{enumerate}
 
 \section{Gaussian Normal Curve as a Probability Density Function: Prove the volume is 2$\pi$ using polar}
@@ -138,7 +137,7 @@
 
 	\item If a series converges absolutely, does it converge? Prove it.
 
-    First notice that $|a_n|$ is either $a_n$ or it is $-a_n$ depending on its sign. This means that we can then say, $0 <= a_n + |a_n| <= 2|a_n|$
+    First notice that $|a_n|$ is either $a_n$ or it is $-a_n$ depending on its sign. This means that we can then say, $0 \leq a_n + |a_n| \leq 2|a_n|$
 
     Now, since we are assuming that $\sum |a_n| $ is convergent then $\sum |a_n| $ is also convergent since we can just factor the 2 out of the series and 2 times a finite value will still be finite. This however allows us to use the Comparison Test to say that $\sum(a_n + |a_n|)$ is also a convergent series.
 
