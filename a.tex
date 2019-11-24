@@ -18,33 +18,61 @@
 \begin{enumerate}[a.]
 	\item \textbf{Cylindrically -- cylindrical bands on the surface }
 
-            Jacobian determinant: $ r $
+            Recall cylindrical Jacobian determinant: $ r $
 
-            $ A(s) = \iint_{D}\sqrt{ (\frac{\partial z}{\partial x})^2 + (\frac{\partial z}{\partial y})^2 + 1 } \cdot dA $
+            Use gradient form (assume $R = 1$):
 
-            $ z = \pm\sqrt{1-x^{2}-y^{2}} $
+            \[ A(s) = \iint_{D}\sqrt{ (\frac{\partial z}{\partial x})^2 + (\frac{\partial z}{\partial y})^2 + R^2 } \cdot dA \]
 
-            $ \frac{\partial z}{\partial x} = \frac{\partial \:}{\partial \:u}\left(\sqrt{u}\right)\frac{\partial \:}{\partial \:x}\left(1-x^2-y^2\right) = \frac{1}{2\sqrt{u}}\left(-2x\right) = -\frac{x}{\sqrt{1-x^2-y^2}} $
+            Solve for z: \[ z = \pm\sqrt{1-x^{2}-y^{2}} \]
 
-            $ \frac{\partial z}{\partial y} = \frac{\partial \:}{\partial \:u}\left(\sqrt{u}\right)\frac{\partial \:}{\partial \:y}\left(1-x^2-y^2\right) = \frac{1}{2\sqrt{u}}\left(-2y\right) = -\frac{y}{\sqrt{1-x^2-y^2}} $
+            Compute partial with respect to x:
 
-            $ 2\int_{0}^{2\pi}\int_{\theta=0}^{\pi} \frac{1}{\sqrt{1-r^2}}\cdot r dr d\theta  $
+            \[ \frac{\partial z}{\partial x} = \frac{\partial \:}{\partial \:u}\left(\sqrt{u}\right)\frac{\partial \:}{\partial \:x}\left(1-x^2-y^2\right) = \frac{1}{2\sqrt{u}}\left(-2x\right) = -\frac{x}{\sqrt{1-x^2-y^2}} \]
+
+            Compute partial with respect to y:
+
+            \[ \frac{\partial z}{\partial y} = \frac{\partial \:}{\partial \:u}\left(\sqrt{u}\right)\frac{\partial \:}{\partial \:y}\left(1-x^2-y^2\right) = \frac{1}{2\sqrt{u}}\left(-2y\right) = -\frac{y}{\sqrt{1-x^2-y^2}} \]
+
+            Plug values and simplify:
+
+            \[ A(s) = \iint_{D}\sqrt{\left(-\frac{x}{\sqrt{1-x^2-y^2}}\right)^2+\left(-\frac{y}{\sqrt{1-x^2-y^2}}\right)^2+1}  \cdot dA \]
+            \[ = \iint_{D}\sqrt{\frac{x^2}{1-x^2-y^2}+\frac{y^2}{1-x^2-y^2}+1}  \cdot dA \]
+            \[ = \iint_{D}\sqrt{\frac{x^2+y^2}{1-x^2-y^2}+1}  \cdot dA \]
+            \[ = \iint_{D}\sqrt{\frac{1}{1-x^2-y^2}}  \cdot dA \]
+            \[ = \iint_{D}\sqrt{\frac{1}{1-(x^2+y^2)}}  \cdot dA \]
+
+            Convert to cylindrical (recall $x^2 + y^2 = r^2$):
+
+            \[ = \iint_{D}\sqrt{\frac{1}{1-(x^2+y^2)}}  \cdot dA \]
+
+            Plug values (recall $0 \leq \theta \leq 2\pi $ and $0 \leq r \leq R $, also multiply integral by 2 to account for both hemispheres) and calculate:
+
+            \[ 2\int_{0}^{1}\int_{\theta=0}^{2\pi} \frac{1}{\sqrt{1-r^2}}\cdot r \cdot dr \cdot d\theta = 2\cdot \int _0^1\frac{2\pi r}{\sqrt{-r^2+1}}dr = 4\pi \]
 
 	\item \textbf{Spherically -- rectangles on surface}
 
-            Jacobian determinant: $ \rho^2\sin(\phi) $
+            Recall spherical Jacobian determinant: \[ \rho^2\sin(\phi) \]
 
-            $ 0 \leq \theta \leq 2\pi  $
+            ...the Cartesian $\rightarrow$ spherical conversions:
 
-            $ 0 \leq \phi \leq \pi  $
+            \[ x = \rho\sin(\phi)\cos(\theta)   \]
+            \[ y = \rho\sin(\phi)\sin(\theta)  \]
+            \[ z = \rho\cos(\phi)  \]
 
-            $ x = \rho\sin(\phi)\cos(\theta)  $
+            ...that any rectangle on the surface will be described as:
 
-            $ y = \rho\sin(\phi)\sin(\theta)  $
+            \[ (\rho\cdot\sin(\theta)\cdot d \phi)\cdot(\rho\cdot d \theta) = \rho^2\cdot\sin(\theta)\cdot d\phi\cdot d\theta \]
 
-            $ z = \rho\cos(\phi)  $
+            ...and that the coordinate values will range as follows:
 
-            $\int_{\theta=0}^{\theta=\pi}r\cdot\int_{\phi=0}^{\phi=2\pi} (r sin \theta) d\phi d\theta $
+            \[ 0 \leq \theta \leq 2\pi  \]
+            \[ 0 \leq \phi \leq \pi  \]
+            \[ 0 \leq \rho \leq R \]
+
+            With this information we can plug and calculate:
+
+            \[ \int_{\theta=0}^{\theta=2\pi}r\cdot\int_{\phi=0}^{\phi=2\pi} (r sin \theta) d\phi d\theta \]
 
             $= \int_{\theta=0}^{\theta=\pi}r^2 2\pi \sin(\theta)d\theta $
 
