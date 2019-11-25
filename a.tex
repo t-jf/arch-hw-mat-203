@@ -10,6 +10,7 @@
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 
 \title{Calculus III Midterm 2 - Solutions}
+\author{Tyler Franklin}
 \date{November 2019}
 
 \begin{document}
@@ -29,9 +30,7 @@
             \[ \frac{\partial z}{\partial y} = \frac{\partial \:}{\partial \:u}\left(\sqrt{u}\right)\frac{\partial \:}{\partial \:y}\left(1-x^2-y^2\right) = \frac{1}{2\sqrt{u}}\left(-2y\right) = -\frac{y}{\sqrt{1-x^2-y^2}} \]
             Plug values and simplify:
             \[ A(s) = \iint_{D}\sqrt{\left(-\frac{x}{\sqrt{1-x^2-y^2}}\right)^2+\left(-\frac{y}{\sqrt{1-x^2-y^2}}\right)^2+1}  \cdot dA \]
-            \[ = \iint_{D}\sqrt{\frac{x^2}{1-x^2-y^2}+\frac{y^2}{1-x^2-y^2}+1}  \cdot dA \]
             \[ = \iint_{D}\sqrt{\frac{x^2+y^2}{1-x^2-y^2}+1}  \cdot dA \]
-            \[ = \iint_{D}\sqrt{\frac{1}{1-x^2-y^2}}  \cdot dA \]
             \[ = \iint_{D}\sqrt{\frac{1}{1-(x^2+y^2)}}  \cdot dA \]
             Convert to cylindrical (recall $x^2 + y^2 = r^2$):
             \[ = \iint_{D}\sqrt{\frac{1}{1-r^2}}  \cdot dA \]
@@ -75,6 +74,7 @@
 	\[r_v := \frac{\partial x}{\partial v}i + \frac{\partial y}{\partial v}j + \frac{\partial z}{\partial v}k = (-\frac{4uv}{\left(1+u^2+v^2\right)^2})i + (\frac{2\left(1+u^2-v^2\right)}{\left(1+u^2+v^2\right)^2})j + (\frac{4v}{\left(1+u^2+v^2\right)^2})k\]
 	\[ A = \iint_{D} |r_u \times r_v| \cdot dA \]
 	\[\iint_{D} |\begin{pmatrix}\frac{8u^3-24uv^2+8u}{\left(u^2+v^2+1\right)^4}&-\frac{8v}{\left(u^2+v^2+1\right)^3}&\frac{4u^4-24u^2v^2+4v^4-4}{\left(u^2+v^2+1\right)^4}\end{pmatrix}| \cdot du\cdot dv\]
+	\[\iint_{D} \frac{8u^3-24uv^2+8u}{\left(u^2+v^2+1\right)^4} \cdot du\cdot dv + \iint_{D}\frac{4u^4-24u^2v^2+4v^4-4}{\left(u^2+v^2+1\right)^4}\end{pmatrix}| \cdot du\cdot dv\]
 \end{enumerate}
 
 \section{Volume of a Sphere $x^2 + y^2 + z^2 = 1^2$}
@@ -279,7 +279,7 @@
      $n$ & $s(n)$ & $\epsilon_n$ \\ [0.5ex]
      1 & $\frac{2^{-1}}{1!}$ & $\frac{1}{8}$ \\
      2 & $\frac{2^{-2}}{2!}$ & $\frac{1}{48}$ \\
-     3 & $\frac{2^{-3}}{3!}$ & $\frac{1}{384}$ \\ [1ex] 
+     3 & $\frac{2^{-3}}{3!}$ & $\frac{1}{384}$ \\ [1ex]
      \hline
     \end{tabular}
     \end{center}
