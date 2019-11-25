@@ -205,16 +205,39 @@
 	With this method, we can use the comparison theorem to prove that:
 	\[\iff \sum_{n=1}{2^k}\frac{1}{n}\geq 1+\frac{k}{2}\]
 	Since $1+\frac{k}{2}$ is clearly infinity, $\sum_{n=1}{\infty}\frac{1}{n}$ must be as well.
-	Using a similar method, we can prove that $\frac{1}{n^2}$ converges by proving that $>\frac{1}{n(n-1)}$ converges to a lesser amount
-	\[\frac{1}{n^2}\frac{1}{n(n-1)} \]
-	11⋅2+11⋅2+…+1��(��−1)=1−12+12−13+…+1��−1−1��=1−1��→1
+	While it might take more work to calculate what $\frac{1}{n^2}$ converges to exactly, we can prove it does converge by using the integral test:
+	\[\sum_{n=2}^{\infty}\frac{1}{n^2}<\int_{1}^{\infty}\frac{1}{x^2}dx<\sum_{n=1}^{\infty}\frac{1}{n^2}\]
+	The first sum is a rectangular underestimate for the integral, and the second sum is an overestimate. Thus, our series sums to almost the integral, the error being at most the value of the first term.
+	\[\int_{1}^{\infty}\frac{1}{x^2}dx = \lim _{x\to \infty \:}\left(-\frac{1}{x}\right)- \lim _{x\to \:1+}\left(-\frac{1}{x}\right) = (0)-(-1) = 1\]
+	This tells us that the sequence converges and it converges to something between 1 and 2.
 	\item Prove with the ratio test that series $e^z$ is absolutely convergent.
+	First, we know that
+	\[e^z=\sum_{n=0}^{\infty}\frac{x^n}{n!}\]
+	Using the ratio test we can show that it converges:
+	\[a_n=\frac{z^n}{n!} \]
+	\[a_{n+1}=\frac{z^{n+1}}{(n+1)!}\]
+	\[\frac{a_{n+1}}{a_n}=\frac{\frac{z^{n+1}}{(n+1)!}}{\frac{z^n}{n!}} = \frac{z^{n+1}n!}{\left(n+1\right)!z^n}=\frac{z^{n-n+1}n!}{\left(n+1\right)!}=\frac{zn!}{\left(n+1\right)!}\]
+	Note the rule:
+	\[\frac{n!}{\left(n+m\right)!}=\frac{1}{\left(n+1\right)\cdot \left(n+2\right)\cdots \left(n+m\right)} \Rightarrow \frac{zn!}{\left(n+1\right)!}=\frac{z}{n+1}\]
+	Finally, we can show that
+	\[\lim_{n\to\infty}|\frac{z}{n+1}|=|z|\cdot(0)=0  \; (\forall \;  z \in \mathbb{R})\]
 	\item Prove using the corollary of the root test that the radius of convergence of $e^z$ is infinite.
+
+	We proved above that $e^z$ converges for all $x\in\mathbb{R}$, however perhaps we can also do so using the root test. The root test tells us that if the following is true, our sequence converges:
+	\[\lim_{n\to\infty}|s(n)|^\frac{1}{n} < 1 \]
+	So we may proceed:
+	\[\lim_{n\to\infty}|s(n)|^\frac{1}{n}\]
+	\[\lim_{n\to\infty}|\frac{z^n}{n!}|^\frac{1}{n}\]
+	\[|x^\infty|^{\frac{1}{\infty}}\cdot\lim_{n\to\infty}|\frac{1}{n!}|^\frac{1}{n}\]
+	\[(1)\cdot\lim_{n\to\infty}\frac{1}{\infty!^\frac{1}{\infty}}\]
+	\[\frac{1}{\infty!^\frac{1}{\infty}}=\frac{1}{1}=1\]
+	Thus, we find that the root test is inconclusive regarding the convergence of $e^z$.
+
 	\item Prove that Euler's formula is true.
-
-	$e^{i\theta} = cos(\theta) + i\sin(\theta)$
-
-	$e^{i\theta} = \sum_{n=0}^{\infty} \frac{1}{n!} \cdot (i\theta)^n$
+	\[e^{i\theta} = cos(\theta) + i\sin(\theta)\]
+    First, we expand:
+    \[e^{i\theta} = \sum_{n=0}^{\infty} \frac{1}{n!} \cdot (i\theta)^n\]
+    \[=
 
 	$ = 1 + 1(i\theta) + \frac{1}{2!}(\sqrt{-1}\theta)^2 + \frac{1}{3}(\sqrt{-1}\theta)^3 \cdots $
 
