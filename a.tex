@@ -9,12 +9,10 @@
 \usepackage{mathtools}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 
-\title{Calculus III Midterm 2 - Solutions}
+\title{Calculus III Midterm 2 Practice}
 \author{Tyler Franklin}
-\date{November 2019}
 
 \begin{document}
-
 \maketitle
 
 \section{Surface Area of a Sphere $x^2 + y^2 + z^2 = 1^2$ }
@@ -70,11 +68,16 @@
 	\[\frac{\partial x}{\partial v} = -\frac{4uv}{\left(1+u^2+v^2\right)^2}\]
 	\[\frac{\partial y}{\partial v} = \frac{2\left(1+u^2-v^2\right)}{\left(1+u^2+v^2\right)^2}\]
 	\[\frac{\partial z}{\partial v} = \frac{4v}{\left(1+u^2+v^2\right)^2}\]
-	\[r_u := \frac{\partial x}{\partial u}i + \frac{\partial y}{\partial u}j + \frac{\partial z}{\partial u}k = (\frac{2\left(-u^2+v^2+1\right)}{\left(1+u^2+v^2\right)^2})i + (-\frac{4vu}{\left(1+u^2+v^2\right)^2})j + (\frac{4u}{\left(1+u^2+v^2\right)^2})k\]
-	\[r_v := \frac{\partial x}{\partial v}i + \frac{\partial y}{\partial v}j + \frac{\partial z}{\partial v}k = (-\frac{4uv}{\left(1+u^2+v^2\right)^2})i + (\frac{2\left(1+u^2-v^2\right)}{\left(1+u^2+v^2\right)^2})j + (\frac{4v}{\left(1+u^2+v^2\right)^2})k\]
+	\[r_u := \frac{\partial x}{\partial u}i + \frac{\partial y}{\partial u}j + \frac{\partial z}{\partial u}k = \left(\frac{2\left(-u^2+v^2+1\right)}{\left(1+u^2+v^2\right)^2}\right)i + \left(-\frac{4vu}{\left(1+u^2+v^2\right)^2}\right)j + \left(\frac{4u}{\left(1+u^2+v^2\right)^2}\right)k\]
+	\[r_v := \frac{\partial x}{\partial v}i + \frac{\partial y}{\partial v}j + \frac{\partial z}{\partial v}k = \left(-\frac{4uv}{\left(1+u^2+v^2\right)^2}\right)i + \left(\frac{2\left(1+u^2-v^2\right)}{\left(1+u^2+v^2\right)^2}\right)j + \left(\frac{4v}{\left(1+u^2+v^2\right)^2}\right)k\]
 	\[ A = \iint_{D} |r_u \times r_v| \cdot dA \]
-	\[\iint_{D} |\begin{pmatrix}\frac{8u^3-24uv^2+8u}{\left(u^2+v^2+1\right)^4}&-\frac{8v}{\left(u^2+v^2+1\right)^3}&\frac{4u^4-24u^2v^2+4v^4-4}{\left(u^2+v^2+1\right)^4}\end{pmatrix}| \cdot du\cdot dv\]
-	\[\iint_{D} \frac{8u^3-24uv^2+8u}{\left(u^2+v^2+1\right)^4} \cdot du\cdot dv + \iint_{D}\frac{4u^4-24u^2v^2+4v^4-4}{\left(u^2+v^2+1\right)^4}\end{pmatrix}| \cdot du\cdot dv\]
+	\[\iint_{D} \left|\begin{pmatrix}\frac{8u^3-24uv^2+8u}{\left(u^2+v^2+1\right)^4}&-\frac{8v}{\left(u^2+v^2+1\right)^3}&\frac{4u^4-24u^2v^2+4v^4-4}{\left(u^2+v^2+1\right)^4}\end{pmatrix}\right| dA\]
+	\[\left|\iint_{D} \frac{8u^3-24uv^2+8u}{\left(u^2+v^2+1\right)^4} \cdot dA \cdot i + \iint_{D}\frac{4u^4-24u^2v^2+4v^4-4}{\left(u^2+v^2+1\right)^4} \cdot dA \cdot j + \iint_{D}\frac{8v}{\left(u^2+v^2+1\right)^3}\cdot dA \cdot k \right|\]
+	\[\int_{-\infty}^{\infty}\int_{-\infty}^{\infty} \frac{8u^3-24uv^2+8u}{\left(u^2+v^2+1\right)^4} \cdot du \cdot dv = 0\]
+	\[\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\frac{4u^4-24u^2v^2+4v^4-4}{\left(u^2+v^2+1\right)^4} \cdot  du \cdot dv = -i\pi\cdot\int_{\infty}^{-\infty}\left(-1\:-\:v^2\right)^{-\frac{5}{2}}\cdot dv = -i\pi \cdot \frac{4i}{3} = \frac{4\pi}{3}\]
+	\[\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\frac{8v}{\left(u^2+v^2+1\right)^3} \cdot  du \cdot dv = \int_{-\infty}^{\infty}\frac{3\pi v\sqrt{v^2+1}}{v^6+3v^4+3v^2+1} \cdot dv = 0\]
+	\[\left|(0)i + \left(\frac{4\pi}{3}\right)j+(0)k\right|=\sqrt{0^2+\left(\frac{4\pi }{3}\right)^2+0^2}=\frac{4\pi}{3}\]
+
 \end{enumerate}
 
 \section{Volume of a Sphere $x^2 + y^2 + z^2 = 1^2$}
@@ -94,7 +97,7 @@
         \[ =2\cdot \int _0^1\int _0^{2\pi }\frac{1-z^2}{2}d\theta dz \]
         \[=2\cdot \int _0^1\pi \left(1-z^2\right)dz\]
         \[=2\pi\codt (\int _0^11dz-\int _0^1z^2dz)\]
-        \[=2\pi\left(1\right-\frac{1}{3})\]
+        \[=2\pi\left(1-\frac{1}{3}\right)\]
         \[=\frac{4\pi }{3} \]
 
 	\item \textbf{Spherically -- convert from Cartesian and calculate}
@@ -264,10 +267,10 @@
 \end{enumerate}
 
 \section{Using series to calculate a pesky integral:}
-    \[\int _{-\infty }^{\infty \:}e^{-\frac{x^2}{2}}dx\]
+    \[\int _{-1 }^{1 \:}e^{-\frac{x^2}{2}}dx\]
     Recall that
     \[e^z= \sum_{n=0}^{\infty}\frac{x^n}{n!}\]
-    \[\Rightarrow \int _{-\infty }^{\infty \:}e^{-\frac{x^2}{2}}dx=\int _{-\infty \:}^{\infty \:\:}\sum_{n=0}^{\infty}\frac{(-\frac{x^2}{2})^n}{n!} dx \]
+    \[\Rightarrow \int _{-1 }^{1 \:}e^{-\frac{x^2}{2}}dx=\int _{-1 \:}^{1 \:\:}\sum_{n=0}^{\infty}\frac{(-\frac{x^2}{2})^n}{n!} dx \]
 
     Remember: a sequence $s(n)$ converges to a limit
     \[L \in\mathbb{R}\iff\forall \; \epsilon > 0  \; \exists \; N \in \mathbb{N} \; s.t. \; |s(n) - L| < \epsilon \; \forall \; n \in \mathbb{N} > N\]
@@ -283,42 +286,37 @@
      \hline
     \end{tabular}
     \end{center}
-    It appears that in order to reach an error threshold of $2^-8 = \frac{1}{256}$ we will only need 3 terms.
-    \[\int _{-\infty \:}^{\infty \:\:}\sum_{n=0}^{2}\frac{(-\frac{x^2}{2})^n}{n!} dx \]
-    \[\int _{-\infty \:}^{\infty \:\:}\frac{-x^{2(0)}}{2^{(0)}(0)!}+\frac{-x^{2(1)}}{2^{(1)}(1)!}+\frac{-x^{2(2)}}{2^{(2)}(2)!} dx \]
+    It appears that in order to reach an error threshold of $2^-8 = \frac{1}{256}$ we will only need 4 terms.
+    \[\int _{-1 \:}^{1 \:\:}\sum_{n=0}^{3}\frac{(-\frac{x^2}{2})^n}{n!} dx \]
+    \[\int _{-1}^1\left|\frac{-x^{2\cdot \:0}}{2^0\cdot \:0!}+\frac{-x^{2\cdot \:1}}{2^1\cdot \:1!}+\frac{-x^{2\cdot \:2}}{2^2\cdot \:2!}+\frac{-x^{2\cdot \:3}}{2^3\cdot \:3!}\right|dx=\frac{669}{280}\]
 
 \section{Using a series to calculate $\pi$}
-    Recall the Maclaurin series formula:
-    \[\sum_{n=0}^{\infty}\frac{f^n(0)x^n}{n!}\]
-    An easy way to go about this is to construct a table for the values:
+    The Generalized binomial formula for $a\in \mathbb R\setminus \{\mathbb N\}$ says
+    \[(1+x)^a= \sum_{k=0}^{\infty}{a\choose k} x^k\]
+    Where: ${{a\choose k} =\frac{a(a-1)\cdots(a-k+1)}{k!}}$. In our case $a=\frac{1}{2}$ and $x=(-x^2)$:
+    \[(1+(-x^2))^{(\frac{1}{2})}= \sum_{k=0}^{\infty}{(\frac{1}{2})\choose k} (-x^2)^k\]
+    \[1+\left(\frac{1}{2}\right)\left(-x^2\right)+\frac{\left(\frac{1}{2}\right)\left(\left(\frac{1}{2}\right)-1\right)}{2!}\left(-x^2\right)^2+\frac{\left(\frac{1}{2}\right)\left(\left(\frac{1}{2}\right)-1\right)\left(\left(\frac{1}{2}\right)-2\right)}{3!}\left(-x^2\right)^3+\dots\]
+    This can be simplified and expanded further:
+    \[1-\frac{x^2}{2}-\frac{x^4}{8}-\frac{x^6}{16}-\frac{5x^8}{128}-\frac{7x^{10}}{256}-\frac{21x^{12}}{1024}\dots\]
+    We can see above the following rather complicated $s(n)$:
+    \[s(n) = \frac{\left(2n-3\right)!!}{2^nn!}\]
+    While solving $\left|s(n) - L\right| < \epsilon$ for $n$ in this case would be difficult, we can try some numbers to see how quickly the error value drops:
     \begin{center}
-     \begin{tabular}{|| c | c | c | c ||}
+     \begin{tabular}{|| c | c ||}
      \hline
-     $n$ & $f^n(x)$ & $f^n(0)$ & $s(x)_n$ \\ [0.5ex]
-     0 & $\sqrt{1+x^2}$ & $1$ & $1$ \\
-     1 & $\frac{x}{\sqrt{1+x^2}}$ & $0$ & $\frac{0}{1!}x$ \\
-     2 & $\frac{1}{\left(1+x^2\right)\sqrt{1+x^2}}$ & $1$ & $\frac{1}{2!}x^2$ \\
-     3 & $-\frac{3x}{\left(1+x^2\right)^{\frac{5}{2}}}$ & $0$ & $\frac{0}{3!}x^3$ \\
-     4 & $-\frac{3\left(-4x^2+1\right)}{\left(1+x^2\right)^{\frac{7}{2}}}$ & $-3$ & $\frac{-3}{4!}x^4$ \\
-     5 & $\frac{15x\left(-4x^2+3\right)}{\left(x^2+1\right)^{\frac{9}{2}}}$ & $0$ & $\frac{0}{5!}x^5$ \\
-     6 & $\frac{45\left(8x^4-12x^2+1\right)}{\left(x^2+1\right)^{\frac{11}{2}}}$ & $45$ & $\frac{45}{6!}x^6$ \\
-     7 & $\frac{315x\left(-8x^4+20x^2-5\right)}{\left(x^2+1\right)^{\frac{13}{2}}}$ & $0$ & $\frac{0}{7!}x^7$ \\
-     8 & $\frac{315\left(64x^6-240x^4+120x^2-5\right)}{\left(x^2+1\right)^{\frac{15}{2}}}$ &
-     $-1575$ & $\frac{-1575}{8!}x^8$ \\
+     $n$ & $s(n)$ \\ [0.5ex]
+     1 & $\frac{1}{2}$ \\
+     2 & $\frac{1}{8}$ \\
+     3 & $\frac{1}{16}$ \\
+     4 & $\frac{5}{128}$ \\
+     5 & $\frac{7}{256}$ \\
+     6 & $\frac{21}{1024}$ \\
+     7 & $\frac{33}{2048}$ \\
      [1ex]
      \hline
     \end{tabular}
     \end{center}
-
-    This gives us a rough start
-    \[1+\frac{0}{1!}x+\frac{1}{2!}x^2+\frac{0}{3!}x^3+\frac{-3}{4!}x^4+\frac{0}{5!}x^5+\frac{45}{6!}x^6+\frac{0}{7!}x^7+\frac{-1575}{8!}x^8+\ldots \:\]
-
-    Which we can refine to a series reference:
-    \[1+\frac{1}{2}x^2-\frac{1}{8}x^4+\frac{1}{16}x^6-\frac{5}{128}x^8+\ldots \]
-
-    The Generalized binomial formula for $a\in \Bbb R\setminus \{\Bbb N\}$ says
-    \[(1+x)^a= \sum_{k=1}^{\infty}{a\choose k} x^k\]
-    Where: ${{a\choose k} =\frac{a(a-1)\cdots(a-k+1)}{k!}}$. In our case $a=1/2$ and $x=x^2$.
+    It appears the answer to the question above is "not fast." After trying more numbers I found that an $N$ of $18$ dropped the coefficient within the threshold but I'm not sure how we would determine that quickly.
 
 \section{Using series to calculate $\frac{\pi^2}{6}$ within an error of $2^{-8}$}
     Remember: a sequence $s(n)$ converges to a limit
