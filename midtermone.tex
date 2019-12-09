@@ -106,7 +106,7 @@ $\theta$ = The angle between the two vectors $\vec{u}$ and $\vec{v}$
 \end{enumerate}
 \section{.}
 \begin{enumerate}[a.]
-\item \textbf{Prove that the cross product $\vec{u} \times \vec{v}$ of two vectors $\vec{u}$ and $\vec{v}$ is actually orthogonal to each of $\vec{u}$ and $\vec{v}$ simultaneously.}\\
+\item \textbf{Prove that the cross product $\vec{u} \times \vec{v}$ of two vectors $\vec{u}$ and $\vec{v}$ is actually orthogonal(perpendicular) to each of $\vec{u}$ and $\vec{v}$ simultaneously.}\\
 \\
 
 $\hspace{1cm}\hat{i}\hspace{.4cm}\hat{j}\hspace{.3cm}\hat{k}\hspace{2cm}\hat{i}\hspace{.4cm}\hat{j}\hspace{.3cm}\hat{k}\\\vec{u} = <u_{1},u_{2},u_{3}>\hspace{.4cm}\vec{v} = <v_{1},v_{2},v_{3}>$\\
@@ -141,8 +141,49 @@ $\vec{u}\cdot\vec{w}=u_{1}(u_{2}v_{3}-u_{3}v_{2})-u_{2}(u_{1}v_{3}-u_{3}v_{1})+u
 \\ 
 $\vec{v}\cdot\vec{w}=v_{1}(u_{2}v_{3}-u_{3}v_{2})-v_{2}(u_{1}v_{3}-u_{3}v_{1})+v_{3}(u_{1}v_{2}-u_{2}v_{1})\\=v_{1}u_{2}v_{3}-v_{1}v_{2}u_{3}-u_{1}v_{2}v_{3}+v_{1}v_{2}u_{3}+u_{1}v_{2}v_{3}-v_{1}u_{2}v_{3}=0$\\
 \\
-Proven Both yield a result of zero which state they are orthogonal simultaneously.
+Proven Both yield a result of zero which state they are orthogonal(perpendicular) simultaneously.
 \end{enumerate}
-
+\begin{enumerate}[b.]
+\item\textbf{Find a vector that is orthogonal(perpendicular) to each of the vectors $e_{1}:= \left(\!
+    \begin{array}{c}
+      1 \\
+      0 \\
+      0
+    \end{array}
+  \!\right)$ and $e_{2}:=\left(\!
+    \begin{array}{c}
+      0 \\
+      1 \\
+      0
+    \end{array}
+  \!\right)$}
+  \\
+  \\
+  From previous knowledge we know that taking the cross product of two vectors yield us a new vector that is orthogonal(perpendicular) to does two vectors. With that being said let perform the cross products of $e_{1}$ with $e_{2}$.
+\\\\
+$e_{1}=<1,0,0>\hspace{.4cm}e_{2}=<0,1,0>$\\
+\\
+$e_{1} \times e_{2}=\begin{vmatrix}
+\hat{i}&\hat{j}&\hat{k}\\
+1&0&0\\
+0&1&0\\
+\end{vmatrix}=\hat{i}\begin{vmatrix}
+0&0\\
+1&0\\
+\end{vmatrix}-\hat{j}\begin{vmatrix}
+1&0\\
+0&0\\
+\end{vmatrix}+\hat{k}\begin{vmatrix}
+1&0\\
+0&1\\
+\end{vmatrix}=0\hat{i}-0\hat{j}+1\hat{k}$\\
+\\
+Let $e_{3}$ equal the result of the cross  products of $e_{1}$ with $e_{2}$.\\
+\\
+$e_{3}=<0,0,1>$
+\end{enumerate}
+\begin{enumerate}[c.]
+\item\textbf{Prove that your vector is actually perpendicular to each of $e_{1}$ and $e_{2}$ simultaneously}
+\end{enumerate}
 \end{document}
 
