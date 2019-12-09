@@ -104,5 +104,45 @@ $\theta$ = The angle between the two vectors $\vec{u}$ and $\vec{v}$
 \item \textbf{Why does the cross product have such geometric significance?}\\
 \\
 \end{enumerate}
+\section{.}
+\begin{enumerate}[a.]
+\item \textbf{Prove that the cross product $\vec{u} \times \vec{v}$ of two vectors $\vec{u}$ and $\vec{v}$ is actually orthogonal to each of $\vec{u}$ and $\vec{v}$ simultaneously.}\\
+\\
+
+$\hspace{1cm}\hat{i}\hspace{.4cm}\hat{j}\hspace{.3cm}\hat{k}\hspace{2cm}\hat{i}\hspace{.4cm}\hat{j}\hspace{.3cm}\hat{k}\\\vec{u} = <u_{1},u_{2},u_{3}>\hspace{.4cm}\vec{v} = <v_{1},v_{2},v_{3}>$\\
+\\
+Step 1. Take the cross product of $\vec{u}$ and $\vec{v}$\\
+\\
+$\vec{u}\times\vec{v}=\begin{vmatrix}
+\hat{i}&\hat{j}&\hat{k}\\
+u_{1}&u_{2}&u_{3}\\
+v_{1}&v_{2}&v_{3}\\
+\end{vmatrix}=\hat{i}
+\begin{vmatrix}
+u_{2}&u_{3}\\
+v_{2}&v_{3}\\
+\end{vmatrix}-\hat{j}\begin{vmatrix}
+u_{1}&u_{3}\\
+v_{1}&v_{3}\\
+\end{vmatrix}+\hat{k}\begin{vmatrix}
+u_{1}&u_{2}\\
+v_{1}&v_{2}\\
+\end{vmatrix}\\
+=\hat{i}(u_{2}v_{3}-u_{3}v_{2})-\hat{j}(u_{1}v_{3}-u_{3}v_{1})+\hat{k}(u_{1}v_{2}-u_{2}v_{1})$\\
+\\
+Let define $\vec{w}$ to be equal to the result of the cross product of $\vec{u}$ and $\vec{v}$\\
+$\vec{w} = \hat{i}(u_{2}v_{3}-u_{3}v_{2})-\hat{j}(u_{1}v_{3}-u_{3}v_{1})+\hat{k}(u_{1}v_{2}-u_{2}v_{1})$\\
+\\
+Step 2. From our previous knowledge we know that if the result of the dot product is zero the vectors are orthogonal(perpendicular). With that being said let perform the dot products of vector $\vec{u}$ with $\vec{w}$ and $\vec{v}$ with $\vec{w}$.\\
+\\
+$\vec{w} = <(u_{2}v_{3}-u_{3}v_{2}),-(u_{1}v_{3}-u_{3}v_{1}),(u_{1}v_{2}-u_{2}v_{1})>$\\
+\\
+$\vec{u}\cdot\vec{w}=u_{1}(u_{2}v_{3}-u_{3}v_{2})-u_{2}(u_{1}v_{3}-u_{3}v_{1})+u_{3}(u_{1}v_{2}-u_{2}v_{1})\\=u_{1}u_{2}v_{3}-u_{1}v_{2}u_{3}-u_{1}u_{2}v_{3}+v_{1}u_{2}u_{3}+u_{1}u_{3}v_{2}-v_{1}u_{2}u_{3}=0$\\
+\\ 
+$\vec{v}\cdot\vec{w}=v_{1}(u_{2}v_{3}-u_{3}v_{2})-v_{2}(u_{1}v_{3}-u_{3}v_{1})+v_{3}(u_{1}v_{2}-u_{2}v_{1})\\=v_{1}u_{2}v_{3}-v_{1}v_{2}u_{3}-u_{1}v_{2}v_{3}+v_{1}v_{2}u_{3}+u_{1}v_{2}v_{3}-v_{1}u_{2}v_{3}=0$\\
+\\
+Proven Both yield a result of zero which state they are orthogonal simultaneously.
+\end{enumerate}
+
 \end{document}
 
