@@ -195,5 +195,74 @@ $e_{2} \cdot e_{3}=(0 \cdot 0) + (1 \cdot 0 ) + (0 \cdot 1) = 0$\\
 \\
 Proven Both yield a result of zero which state they are orthogonal(perpendicular)
 \end{enumerate}
+\section{}
+\begin{enumerate}[a]
+\item\textbf{The volume of the parallelopiped (three-dimensional analogue of a parallelo-
+gram) spanned by three vectors $\vec{u}$, $\vec{v}$ and $\vec{w}$ is given by:}\\
+\\
+$(\vec{u}\times\vec{v})\cdot\vec{w}:=<\vec{u}\times\vec{v},\vec{w}>$\\
+\\ This just mean take the cross product of $\vec{u}$ with $\vec{v}$ and then take the dot product of the result with $\vec{w}$. Both side mean the same thing just different notation for the dot product!\\
+\\
+\textbf{This is known as the triple product of $\vec{u}$, $\vec{v}$ and $\vec{w}$. Interestingly enough, this is a way of defining the determinant of a matrix. Given a matrix:}\\
+\\
+$M:=\begin{vmatrix}
+u_{1}&v_{1}&w_{1}\\
+u_{2}&v_{2}&w_{2}\\
+u_{3}&v_{3}&w_{3}\\
+\end{vmatrix}$\\
+\\
+\textbf{where we notice that the columns of the matrix are precisely the vectors $\vec{u}$, $\vec{v}$ and $\vec{w}$. we can actually define the determinant of the matrix M via:}\\
+\\
+$det(M ) := <\vec{u}\times\vec{v},\vec{w}>$\\
+\\
+\textbf{Prove that these two definitions yield the same thing! The determinant of a
+matrix is said to encode the amount that the unit parallelopiped is scaled upon
+applying the linear transformation of space represented by the matrix.}\\
+\\
+To prove this we just need to take the determinant of M which is the left side of the equation and them evaluate the right side of the question which just mean take the cross product of $\vec{u}$ with $\vec{v}$ and then take the dot product of the result with $\vec{w}$.\\
+\\
+Left side of the equation:\\
+\\
+$det(M ) := \begin{vmatrix}
+u_{1}&v_{1}&w_{1}\\
+u_{2}&v_{2}&w_{2}\\
+u_{3}&v_{3}&w_{3}\\
+\end{vmatrix}=u_{1}\begin{vmatrix}
+v_{2}&w_{2}\\
+v_{3}&w_{3}\\
+\end{vmatrix}-v_{1}\begin{vmatrix}
+u_{2}&w_{2}\\
+u_{3}&w_{3}\\
+\end{vmatrix}+w_{1}\begin{vmatrix}
+u_{2}&v_{2}\\
+u_{3}&v_{3}\\
+\end{vmatrix}\\\\:=u_{1}(v_{2}w_{3} - w_{2}v_{3}) - v_{1}(u_{2}w_{3}-w_{2}u_{3})+w_{1}(u_{2}v_{3}-v_{2}u_{3})\\:=u_{1}v_{2}w_{3} - u_{1}w_{2}v_{3}-v_{1}u_{2}w_{3}+v_{1}w_{2}u_{3}+w_{1}u_{2}v_{3}-w_{1}v_{2}u_{3}$\\
+\\
+\\
+Right side of the equation:\\
+\\
+$<\vec{u}\times\vec{v},\vec{w}>$\\
+\\
+$\vec{u}\times\vec{v}=\begin{vmatrix}
+\hat{i}&\hat{j}&\hat{k}\\
+u_{1}&u_{2}&u_{3}\\
+v_{1}&v_{2}&v_{3}\\
+\end{vmatrix}=\hat{i}
+\begin{vmatrix}
+u_{2}&u_{3}\\
+v_{2}&v_{3}\\
+\end{vmatrix}-\hat{j}\begin{vmatrix}
+u_{1}&u_{3}\\
+v_{1}&v_{3}\\
+\end{vmatrix}+\hat{k}\begin{vmatrix}
+u_{1}&u_{2}\\
+v_{1}&v_{2}\\
+\end{vmatrix}\\
+=\hat{i}(u_{2}v_{3}-u_{3}v_{2})-\hat{j}(u_{1}v_{3}-u_{3}v_{1})+\hat{k}(u_{1}v_{2}-u_{2}v_{1})$\\
+\\
+$<\vec{u}\times\vec{v},\vec{w}> := w_{1}(u_{2}v_{3}-u_{3}v_{2})-w_{2}(u_{1}v_{3}-u_{3}v_{1})+w_{3}(u_{1}v_{2}-u_{2}v_{1})\\:=w_{1}u_{2}v_{3}-w_{1}u_{3}v_{2}-w_{2}u_{1}v_{3}+w_{2}u_{3}v_{1}+w_{3}u_{1}v_{2}-w_{3}u_{2}v_{1}$\\
+\\
+You can clearly see that they are equal to each other proven!
+\end{enumerate}
 \end{document}
 
