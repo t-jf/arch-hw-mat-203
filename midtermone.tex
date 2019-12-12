@@ -19,6 +19,30 @@
 
 \begin{document}
 \maketitle
+
+Recall that the dot product of two vectors $\vec{u}$ and $\vec{v}$ may be denoted by any of
+the expressions " $\vec{u}\cdot \vec{v}$ ", " $<\vec{u}, \vec{v}>$ ", " $\vec{u}^T \vec{v}$ ", and is also referred to as “the inner product”.
+\\
+\\
+The cross product of two vectors u and v will be denoted “ $\vec{u}\times\vec{v}$ ”.
+Also, recall that the length of any vector $\vec{u}$ is denoted by $\mid\vec{u}\mid$.
+\\
+\\
+Throughout this review, lets establish the following notation:\\
+\\
+\\
+$\vec{u}=\left(\!\begin{array}{c}u_{1} \\ u_{2} \\  u_{3}\end{array} \!\right)$,
+$\vec{v}=\left(\!\begin{array}{c}v_{1} \\ v_{2} \\  v_{3}\end{array} \!\right)$,
+$\vec{w}=\left(\!\begin{array}{c}w_{1} \\ w_{2} \\  w_{3}\end{array} \!\right)$
+\\
+\\
+\\
+$e_{1}=\left(\!\begin{array}{c}1 \\ 0 \\  0\end{array} \!\right)$,
+$e_{2}=\left(\!\begin{array}{c}0 \\ 1 \\  0\end{array} \!\right)$,
+$e_{3}=\left(\!\begin{array}{c}0 \\ 0 \\  1\end{array} \!\right)$
+\\
+\\
+\\
 \begin{enumerate}[1.]
 \item\textbf{Prove that for any two vectors u and v, the inner product of u and v is equal to $\mid\vec{u}\mid\mid\vec{v}\mid\cos(\theta)$ where $\theta$ is the angle between $\vec{u}$ and $\vec{v}$.\\\\Hint: Draw the picture and recall the Law of Cosines is just a degeneration of
 the Pythagorean Theorem:}\\
@@ -54,7 +78,7 @@ Vectors are orthogonal(perpendicular) if and only if the result of the dot produ
 \\
 Yes they are orthogonal 
 \end{enumerate}
-\begin{enumerate}[3]
+\begin{enumerate}[3.]
 \item\textbf{Prove that the cross product of two vectors $\vec{u}$ and $\vec{v}$ is actually orthogonal to each of $\vec{u}$ and $\vec{v}$ simultaneously, i.e. $\vec{u}\times\vec{v}$ is orthogonal to $\vec{u}$ and $\vec{u}\times\vec{v}$ is
 orthogonal to $\vec{v}$ }
 \\
@@ -89,5 +113,9 @@ $\vec{u}\cdot\vec{w}=u_{1}(u_{2}v_{3}-u_{3}v_{2})-u_{2}(u_{1}v_{3}-u_{3}v_{1})+u
 $\vec{v}\cdot\vec{w}=v_{1}(u_{2}v_{3}-u_{3}v_{2})-v_{2}(u_{1}v_{3}-u_{3}v_{1})+v_{3}(u_{1}v_{2}-u_{2}v_{1})\\=v_{1}u_{2}v_{3}-v_{1}v_{2}u_{3}-u_{1}v_{2}v_{3}+v_{1}v_{2}u_{3}+u_{1}v_{2}v_{3}-v_{1}u_{2}v_{3}=0$\\
 \\
 Proven Both yield a result of zero which state they are orthogonal(perpendicular) simultaneously.
+\end{enumerate}
+\begin{enumerate}[4.]
+\item\textbf{Find a vector that is orthogonal to each of the vectors $1\cdot e_{1}+1\cdot e_{2}+1\cdot e_{3}$ and $1\cdot e_{1}+1\cdot e_{2}+0\cdot e_{3}$. Prove that your vector is actually perpendicular to
+each of $e_{1}$ and $e_{2}$ simultaneously}
 \end{enumerate}
 \end{document}
