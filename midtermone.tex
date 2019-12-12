@@ -11,7 +11,7 @@
 \usepackage{amsmath}
 \usepackage{cancel}
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
-\title{Calculus III Midterm 1 Practice}
+\title{Calculus III Review Sheet 1 Practice}
 \author{Eddie Ozuna,Tyler Franklin}
 
 \begin{document}
@@ -196,7 +196,7 @@ $e_{2} \cdot e_{3}=(0 \cdot 0) + (1 \cdot 0 ) + (0 \cdot 1) = 0$\\
 Proven Both yield a result of zero which state they are orthogonal(perpendicular)
 \end{enumerate}
 \section{}
-\begin{enumerate}[a]
+\begin{enumerate}[a.]
 \item\textbf{The volume of the parallelopiped (three-dimensional analogue of a parallelo-
 gram) spanned by three vectors $\vec{u}$, $\vec{v}$ and $\vec{w}$ is given by:}\\
 \\
@@ -263,9 +263,80 @@ v_{1}&v_{2}\\
 $<\vec{u}\times\vec{v},\vec{w}> := w_{1}(u_{2}v_{3}-u_{3}v_{2})-w_{2}(u_{1}v_{3}-u_{3}v_{1})+w_{3}(u_{1}v_{2}-u_{2}v_{1})\\:=w_{1}u_{2}v_{3}-w_{1}u_{3}v_{2}-w_{2}u_{1}v_{3}+w_{2}u_{3}v_{1}+w_{3}u_{1}v_{2}-w_{3}u_{2}v_{1}$\\
 \\
 You can clearly see that they are equal to each other proven!
-\begin{enumerate}[b]
-\item\textbf{Draw the result of applying this linear transformation to the unit parallelopiped spanned by the basis vectors $\vec{e_{1}}$ , $\vec{e_{2}}$ , and $\vec{e_{3}}$. The volume of the unit parallelop-iped is, of course, 1·1·1 = 1.}
 \end{enumerate}
+\begin{enumerate}[b.]
+\item\textbf{Draw the result of applying this linear transformation to the unit parallelopiped spanned by the basis vectors $\vec{e_{1}}$ , $\vec{e_{2}}$ , and $\vec{e_{3}}$. The volume of the unit parallelop-iped is, of course, 1·1·1 = 1.}\\
+\\
+\end{enumerate}
+\begin{enumerate}[c.]
+\item\textbf{What is the volume of the new parallelopiped after
+the linear transformation described by the matrix? Compute the determinant
+of this matrix, and also the quantity and verify that they are equal, verifying that, at least in this case, the determi-nant of the matrix describing the linear transformation does in fact encode the change in volume of the unit parallelopiped under this transformation of space!}\\
+\\
+Just evaluate each one and check if the results are equal.\\
+1.)
+  $M:=\left(\!
+    \begin{array}{c}
+      1 \hspace{.5cm} 2 \hspace{.5cm} 3 \\
+      4 \hspace{.5cm} 5 \hspace{.5cm} 6 \\
+      7 \hspace{.5cm} 8 \hspace{.5cm} 8 \\
+    \end{array}
+  \!\right)$\\
+  \\  
+  \\
+  \\
+  $det(M ) := \begin{vmatrix}
+1&2&3\\
+4&5&6\\
+7&8&8\\
+\end{vmatrix}:=1\begin{vmatrix}
+5&6\\
+8&8\\
+\end{vmatrix}-2\begin{vmatrix}
+4&6\\
+7&8\\
+\end{vmatrix}+3\begin{vmatrix}
+4&5\\
+7&8\\
+\end{vmatrix}\\:=1(5\cdot8-6\cdot8)-2(4\cdot8-6\cdot7)+3(4\cdot8-5\cdot7)\\:=-8+20-9:=3$\\
+\\
+ 2.)
+ $<\vec{u}:=\left(\!
+    \begin{array}{c}
+      1 \\
+      4 \\
+      7
+    \end{array}
+  \!\right)\times\vec{v}:=\left(\!
+    \begin{array}{c}
+      2 \\
+      5 \\
+      8
+    \end{array}
+  \!\right),\vec{w}:=\left(\!
+    \begin{array}{c}
+      3 \\
+      6 \\
+      8
+    \end{array}
+  \!\right)>$\\ 
+$\vec{u}\times\vec{v}=\begin{vmatrix}
+\hat{i}&\hat{j}&\hat{k}\\
+1&4&7\\
+2&5&8\\
+\end{vmatrix}=\hat{i}\begin{vmatrix}
+4&7\\
+5&8\\
+\end{vmatrix}-\hat{j}\begin{vmatrix}
+1&7\\
+2&8\\
+\end{vmatrix}+\hat{k}\begin{vmatrix}
+1&4\\
+2&5\\
+\end{vmatrix}\\ = \hat{i}(4 \cdot 8-7 \cdot5)-\hat{j}(1\cdot8-7\cdot2)+\hat{j}(1\cdot5-4\cdot2)\\=-3\hat{i}+6\hat{j}-3\hat{k}$\\
+\\
+$<\vec{u}\times\vec{v},\vec{w}>=(-3\cdot3)+(6\cdot6)+(-3\cdot8)=3 $\\
+
 \end{enumerate}
 \end{document}
 
