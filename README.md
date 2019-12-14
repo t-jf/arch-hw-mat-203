@@ -1,2 +1,2 @@
-# calc3-m2-slns
-MATH20300 calculus III 1st && 2nd midterm  practice/review solutions for study group
+# calc3-study-materials
+MATH20300 calculus III Midterm 1 and 2 practice and solution review for study group
