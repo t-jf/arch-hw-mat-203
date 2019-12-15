@@ -450,16 +450,50 @@
 
 \[Ax^{2} + Bxy + Cy^2 + Dx + Ey + F = 0\]
 
-\textbf{Convince yourself that every conic section arises from choosing different values of the coefficients A − F.}
+\textbf{Convince yourself that every conic section arises from choosing different values of the coefficients $A-F$.}\newline
 
-We can see it is true by the forms of known quadric curves:
+We can see it is true by the forms of known quadric curves: \newline
 
-Circle: $x^2 + y^2 - (0)$
+\hspace{1cm} \textbf{Circle:} $A=1, B=0, C=1, D=0, E=0, F=-1$
+    \[x^2 + y^2 - 1 = 0\]
 
-Ellipse: $x^2 / a^2 + y^2 / b^2 - (1)$
+\hspace{1cm} \textbf{Ellipse:} $A=\frac{1}{2}, B=0, C=\frac{1}{2}, D=0, E=0, F=-1$
+    \[\frac{x^2}{2} + \frac{y^2}{2} - 1 = 0\]
 
-Parabola: $4px = y^2$
+\hspace{1cm} \textbf{Parabola:} $A=0, B=0, C=-1, D=4, E=0, F=0$
+    \[4x - y^2 = 0\]
 
-Hyperbola: $x^2 / a^2 - y^2 / b^2 = 1$
+\hspace{1cm} \textbf{Hyperbola:} $A=\frac{1}{2}, B=0, C=-\frac{1}{2}, D=0, E=0, F=-1$ 
+    \[\frac{x^2}{a^2} - \frac{y^2}{b^2} - 1 = 0\]
+
+Each of these are created by changing coefficients $A-F$ of the master equation. 
+
+\section{Quadrics}
+
+\textbf{In three-dimensional space, we have the quadric surfaces described/parameterized by the “master equation”:}
+\[Ax^2 + By^2 + Cz^2 + Dxy + Exz + Fyz + Gx + Hy + Iz + J = 0\]
+
+\begin{enumerate}[a.]
+    \item\textbf{Convince yourself that every quadric surface arises from choosing different values of the coefficients $A−J$.}
+    
+    We illustrate this below.
+    
+    \item\textbf{Are the conic sections a special case of the quadric surfaces? Why or why not?}
+    
+    Yes, quadric surfaces are the generalization of conic sections, which is to say when any quadric surface intersects a coordinate plane, the trace is a conic section.
+    
+    \item\textbf{Find the coefficients that describe a sphere, a paraboloid, a hyperboloid, etc.}
+    
+\hspace{1cm} \textbf{Sphere:} $A=1, B=1, C=1, D=0, E=0, F=0, G=0, H=0, I=0, K=-1$
+    \[x^2 + y^2 + z^2 - 1 = 0\]
+
+\hspace{1cm} \textbf{Paraboloid:} $A=\frac{1}{2}, B=-\frac{1}{2}, C=0, D=4, E=0, F=0, G=0, H=0, I=-1, J=0, K=0$
+    \[\frac{x^2}{2} - \frac{y^2}{2} - z = 0\]
+
+\hspace{1cm} \textbf{Hyperboloid:} $A=\frac{1}{a^2}, B=\frac{1}{b^2}, C=-\frac{1}{c^2}, D=0, E=0, F=0, G=0, H=0, I=0, J=0, K=-1$ 
+    \[\frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} - 1 = 0\]
+
+\end{enumerate}
+
 
 \end{document}
