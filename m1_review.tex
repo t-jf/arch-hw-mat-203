@@ -581,7 +581,7 @@ D_{u}f(1,0)& =\lim_{h \to 0} \frac{f(<1,0>+h\cdot<1,0>)-f(1,0)}{h}\\
 	\[\nabla f(0,1)=(2(0),2(1)) = (0,2)\]
 	\[(0,2)\cdot(0,1)=(0\cdot0)+(2\cdot1)=2\]
 
-\section{Sphere normals}
+\section{Unit sphere normals}
     \textbf{Find the normal vector to the surface defined by the equation $x^{2} + y^{2} + z^{2} =1^{2}$ at the point $(0,0,1)$ and use this normal vector to find the equation of the plane tangent to the surface at this point.}
 \begin{enumerate}[a.]
     \item The first is a trick question. We can tell immediately that this is a unit sphere (i.e. $R=1$) so at the point $(0,0,1)$ a valid normal vector is... $(0,0,1)$ or some linear combination thereof, such as $(0,0,2)$.
@@ -591,5 +591,18 @@ D_{u}f(1,0)& =\lim_{h \to 0} \frac{f(<1,0>+h\cdot<1,0>)-f(1,0)}{h}\\
 	\[(0)(x-(0))+(0)(y-(0))+(1)(z-(1))=0\]
 	\[z-1=0\]
 \end{enumerate}
+
+\section{Gradient concept}
+
+\textbf{Why is the direction of the gradient of a function at a point the direction along
+which the value of the function will ascend most quickly? Why is the negative
+of the gradient of a function at a point the direction along which the value of
+the function will descend most quickly?}\newline
+
+The answer to both questions is the nature of the gradient, as its speed/angle of descent is provided by the dot product. That is, if you project $\nabla f$ along any direction $\vec{v}$ \textit{other} than $\nabla f$ via the dot product...
+\[\mid\vec{\nabla f}\mid\mid\vec{v}\mid\cos(\theta)\]
+...by definition you will find that the maximum value is attained when $\cos(\theta)=1$, i.e. when $\theta=0$, which means $\vec{v}$ and $\nabla f$ are equal.
+    
+    
     
 \end{document}
