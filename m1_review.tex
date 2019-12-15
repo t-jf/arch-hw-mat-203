@@ -18,7 +18,7 @@
 \maketitle
 \section{Dot Products}
 \begin{enumerate}[a.]
-	\item \textbf{What is the geometric significance of the dot product? }\\
+	\item \textbf{What is the geometric significance of the dot product? }
 	      \\
 	      Two vectors are orthogonal(Perpendicular) if and only if the result of the dot product is equal to zero.\\\\
 	      $\vec{u} = <u_{1},u_{2},u_{3}>\hspace{.4cm}\vec{v} = <v_{1},v_{2},v_{3}>$\\
@@ -495,5 +495,35 @@ Each of these are created by changing coefficients $A-F$ of the master equation.
 
 \end{enumerate}
 
+\section{Tangent and normal vectors}
+\textbf{The twisted cubic curve is parameterized by a single parameter t via:} 
+\[
+t\mapsto\left(\begin{array}{c}x(t) = t  y(t)=t^{2}   z(t)=t^{3}\end{array} \right)
+\]
+
+\textbf{Find the parameterization of the tangent vector to the twisted cubic curve. Use your parameterization of the tangent vector to find a vector perpendicular to the twisted cubic curve at the point $(1,1,1)$ on the curve.}\newline
+
+Let $c(t)=\left(x(t) = t, y(t)=t^{2}, z(t)=t^{3}\right)$ \newline
+
+\textbf{Step 1.} Take the derivative of the components of c(t)
+
+\[ \frac{dc}{dt}=\left(x(t) = 1, y(t)= 2t, z(t)=3t^{2}\right) \]
+
+\textbf{Step 2.} Use $\frac{dc}{dt}$ to get the tangent vector at $(1,1,1)$
+
+\[\frac{dc}{dt}(1, 1, 1) = (1,2,3)\]
+
+\textbf{Step 3.} To get a normal to the surface at this point, we need a vector that's normal to the tangent we just computed: $(1,2,3)$. That is...
+
+\[(1,2,3)\cdot\vec{v}=0\]
+\[(1,2,3)\cdot(v_1,v_2,v_3)=0\]
+\[(1\cdot v_1)+(2\cdot v_2)+(3 \cdot v_3) = 0\]
+
+At this point we just pick values for $v_1, v_2, v_3$ which make the equation equal 0. For example, $(2, -1, 0)$ is a viable answer. We can check...
+
+\[\vec{v} = (2, -1, 0)\]
+\[(1,2,3)\cdot(2, -1, 0)=0\]
+\[(1\cdot2)+(2\cdot-1)+(3\cdot0)=0\]
+\[2-2+0=0\]
 
 \end{document}
