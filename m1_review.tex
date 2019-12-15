@@ -526,9 +526,8 @@ At this point we just pick values for $v_1, v_2, v_3$ which make the equation eq
 \[(1\cdot2)+(2\cdot-1)+(3\cdot0)=0\]
 \[2-2+0=0\]
 
-\section{Surface intersections}
-\begin{enumerate}
-    \item\textbf{Find two surfaces whose intersection is the curve (ellipse) described by the equation:}
+\section{Conic Sections}
+\textbf{Find two surfaces whose intersection is the curve (ellipse) described by the equation:}
     
     \[\frac{x^2}{1^2}+\frac{y^2}{2^2}=1^2\]
     
@@ -537,6 +536,49 @@ At this point we just pick values for $v_1, v_2, v_3$ which make the equation eq
     \[x^2+y^2=z^2\]
     
     \textbf{is the ellipse described above. More ambitiously, can you find the plane whose intersection with this cone gives an arbitrary conic section?!}
+    
+    This is the illustrative example of conic sections. Intersecting the cone with a plane can provide an arbitrary ellipse which varies depending on the plane's orientation.
+    
+\section{Singularities}
+\begin{enumerate}
+    \item\textbf{At which point will the tangent plane to the cone described by}
+    \[xy = z^2\]
+    \textbf{be ill-defined?}
+    
+    At origin, $(0,0,0)$.
+    
+    \item\textbf{Can you explain why?}
+    
+    At the origin, the value is indeterminate because that point on the surface is a singularity -- i.e. it is "sharp."
+    
+    \item\textbf{What does this surface look like?}
+    
+    It's an infinite elliptic cone.
 \end{enumerate}
+
+\section{Directional derivative}
+\textbf{Consider the surface that is the graph of the function $f(x,y):=x^3+x-y^5$. Calculate the directional derivative of the function $f(x, y) := x^2+y^2$ at the point $e_1 := (1,0)$ in the direction of the (unit) vector parallel to $e_2 := (0,1)$ using the limit definition and verify that it agrees with the directional derivative of $f(x, y)$ at the point $e_1$ in the direction of the (unit) vector $e_1$.}
+
+\textbf{Step 1.} Calculate the directional derivative using the limit definition
+
+\begin{equation}
+\begin{split}
+D_{u}f(\vec{p})& =\lim_{h \to 0} \frac{f(\vec{p}+h\cdot\vec{u})-f(\vec{p})}{h}\\
+D_{u}f(1,0)& =\lim_{h \to 0} \frac{f(<1,0>+h\cdot<1,0>)-f(1,0)}{h}\\
+& =\lim_{h \to 0} \frac{f(<1,0>+<h,0>)-f(1,0)}{h}\\
+& =\lim_{h \to 0} \frac{f(<1+h,0+0>)-f(1,0)}{h}\\
+& =\lim_{h \to 0} \frac{(1+h)^{2}+0^{2}-(1^{2}+0^{2})}{h}\\
+& =\lim_{h \to 0} \frac{1+2h+h^{2}-1}{h}\\
+& =\lim_{h \to 0} \frac{2h+h^{2}}{h}\\
+& =\lim_{h \to 0} \frac{h(2+h)}{h}\\
+& =\lim_{h \to 0} (2+h)\\
+& =2
+\end{split}
+\end{equation}
+
+	\textbf{Step 2.} Calculate the the product of the gradient $\nabla f(x,y)$ and $e_2$:
+	\[\nabla f(x,y)=(2x,2y)\]
+	\[\nabla f(0,1)=(2(0),2(1)) = (0,2)\]
+	\[(0,2)\cdot(0,1)=(0\cdot0)+(2\cdot1)=2\]
 
 \end{document}
