@@ -1,2 +1,2 @@
-# calc3-study-materials
-MATH20300 calculus III Midterm 1 and 2 practice and solution review for study group
+# hw-mat-203
+MATH203 Calculus 3 Study Group Materials

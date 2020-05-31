@@ -1,0 +1,6 @@
+[submodule "hw-mat-203-m-1"]
+	path = hw-mat-203-m-1
+	url = git@github.com:tylerfranklin/hw-mat-203-m-1
+[submodule "hw-mat-203-m-2"]
+	path = hw-mat-203-m-2
+	url = git@github.com:tylerfranklin/hw-mat-203-m-2
