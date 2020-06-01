@@ -1,0 +1,18 @@
+VerbEnvir
+{
+    verbatim comment listing lstlisting verbatimtab rawhtml errexam picture texdraw minted
+    
+}
+
+PostLink
+{ 
+    \index 
+}
+
+WipeArg
+{
+    \label:{} \ref:{} \vref:{} \pageref:{} \index:{} \cite:[]{}
+    \input:{} \verbatiminput:[]{} \listinginput:[]{}{}
+    \verbatimtabinput:[]{} \include:{} \includeonly:{} 
+    \bibitem:[]{} \mintinline:[]{}{}
+}
